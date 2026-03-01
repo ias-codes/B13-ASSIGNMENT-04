@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Job Tracker | Home</title>
+  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+  <!-- tailwind + daisy ui -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      font-family: "Geist", sans-serif;
+    }
+
+    body {
+      background-color: #F8FAFC;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen">
+  <!-- header section -->
+  <section class="container mx-auto px-[245px] py-[60px]">
+    <h1 class="text-3xl font-bold mb-[20px]">Job Application Tracker</h1>
+    <div class="flex justify-between gap-4 ">
+      <div class=" p-4 bg-white rounded w-full shadow">
+        <p class="mb-2 text-neutral text-[#323B49] ">Total</p>
+        <span class="font-bold text-2xl" id="total-job">0</span>
+      </div>
+      <div class=" p-4 bg-white rounded w-full shadow ">
+        <p class="mb-2 text-neutral text-[#323B49] ">Interview</p>
+        <span class="font-bold text-2xl text-green-500" id="total-interview">0</span>
+      </div>
+      <div class=" p-4 bg-white rounded w-full shadow ">
+        <p class="mb-2 text-neutral text-[#323B49] ">Rejected</p>
+        <span class="font-bold text-2xl text-red-500" id="total-rejected">0</span>
+      </div>
+    </div>
+    <hr class="my-[30px] text-[#ddd]">
+  </section>
+
+  <section class="container mx-auto px-[245px]">
+    <div class="flex justify-between mb-5">
+      <h2 class="text-xl font-semibold text-neutral text-[#323B49]">Available Jobs</h2>
+      <p><span id="total-job-right">0</span> jobs</p>
+    </div>
+    <!-- buttons -->
+    <div class="mb-4 gap-2">
+      <button class="btn font-normal">All</button>
+      <button class="btn font-normal">Interview</button>
+      <button class="btn font-normal">Rejected</button>
+    </div>
+    <!-- no job page -->
+    <div class="flex flex-col items-center justify-center px-10 py-16 bg-white rounded w-full shadow hidden">
+      <img class="mb-7" src="jobs.png" alt="">
+      <h1 class="text-2xl font-semibold text-neutral text-[#323B49] mb-1">No jobs available</h1>
+      <p>Check back soon for new job opportunities</p>
+    </div>
+
+    <!-- jobs post -->
+    <div id="jobs-total-card" class="p-6 bg-white rounded w-full shadow my-4">
+      <div class="flex items-center justify-between mb-5">
+        <div>
+          <h2 class="font-bold">Mobile First Corp</h2>
+          <p>React Native Developer</p>
+        </div>
+        <div class="rounded-full border w-[32px] h-[32px] flex items-center justify-center">
+          <i class="fa-regular fa-trash-can"></i>
+        </div>
+      </div>
+      <p class="mb-5">Remote
+        •
+        Full-time
+        •
+        $130,000 - $175,000</p>
+      <button class="btn uppercase mb-2">Not Applied</button>
+      <p class="mb-5 text-[#323B49]">Build cross-platform mobile applications using React Native. Work on products used by millions of
+        users worldwide.</p>
+      <button class=" btn uppercase btn-outline btn-success">interview</button>
+      <button class="btn uppercase btn-outline btn-error">Rejected</button>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
