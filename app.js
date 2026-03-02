@@ -1,4 +1,4 @@
-let JobCardsInput = document.querySelectorAll('#jobs-total-card');
+let JobCardsInput = document.querySelectorAll('.jobs-total-card');
 let totalJobsCard = JobCardsInput.length;
 
 //  input total jobs
